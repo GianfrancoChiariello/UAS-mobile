@@ -43,7 +43,7 @@ export default function Login() {
         alignItems: 'center',
     }}>
         <TouchableOpacity style={style.arrowContainer} onPress={() => {
-          history.push('main2')
+          history.push('home')
         }}>
             <AwesomeIcon name="arrow-left" style={style.arrowIcon} />
         </TouchableOpacity>

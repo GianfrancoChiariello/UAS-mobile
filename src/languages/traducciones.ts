@@ -32,7 +32,7 @@ const traducciones = {
             personalDescripion: 'Tus accesos personales',
             specialDescripion: 'Tus accesos especiales',
             teamDescripion: 'Tus accesos de equipo',
-            requestDescripion: 'Tus solicitudes',
+            requesttDescripion: 'Tus solicitudes',
             configDescripion: 'Tu configuración'
         }
     },
@@ -69,7 +69,7 @@ const traducciones = {
             personalDescripion: 'Your personal accesses',
             specialDescripion: 'Your special accesses',
             teamDescripion: 'Your team accesses',
-            requestDescripion: 'Your requests',
+            requesttDescripion: 'Your requests',
             configDescripion: 'Your configuration'
         }
     },
