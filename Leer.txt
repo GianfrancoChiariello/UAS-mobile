@@ -1,0 +1,68 @@
+Si sos un desarrollador nuevo instala "codetour" como extension para el recorrido por el codigo.
+
+Pasos a ejecutar el tour.
+
+Pages            |  Componentes
+
+App.tsx ----->      Null
+Home.tsx ---->      RegionS.tsx
+Login.tsx --->      Title.tsx & FormBox.tsx
+subScreens/MainScreen.tsx --> Box.tsx & MainC.tsx
+
+
+//Metodologias:
+
+Se trato basicamente de eliminar childrens de los imports, por lo cual casi todas las funciones tienen un hook personalizado.
+
+- useStyles: retorna un objeto creado con "StyleSheet", seria un "global.css" de react.
+- useLanguage: utiliza un objeto con 3 idiomas y un state que indica el idioma actual.
+- useStates: guarda los estados globales de todos los fetch -> const {state1} = useStates() y retorna el estado sin tener que importar nada.
+
+
+//Arquitectura:
+
+Se trato basicamente de hacer un semi atomic design donde cada componente tiene la mas minima logica.
+
+my-app/
+├── android/ Proximamente
+├── ios/ Proximamente
+├── uas-mobile/
+│   ├── .expo/
+│   ├── .tours/
+│   ├── assets/
+│   ├── components/
+│   ├── hooks/
+│   ├── redux/
+│   ├── src
+│   │	 ├── Auth
+│   │ 	 ├── Functions	
+│   │  	 ├── languages
+│   │  	 ├── languages
+│   │    ├── redux
+│   │    └── utils
+│   │
+│   ├── App.js
+│   └── index.js
+├── .babelrc
+├── .gitignore
+├── package.json
+├── .env.development
+├── .env.production
+└── yarn.lock
+
+
+
+
+//Reutilizabilidad:
+
+Se generaron modales globales con props independientes para no repetir codigo.
+
+//Fetchs y peticiones:
+
+Se utilizo axios como libreria reemplazando el fetch nativo de js, y se uso redux con thunk como manejador de estados globales.
+
+
+
+
+
+

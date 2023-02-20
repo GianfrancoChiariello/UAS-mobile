@@ -1,15 +1,34 @@
 {
   "dependencies": {
+    "@expo/webpack-config": "^0.17.2",
+    "@react-native-async-storage/async-storage": "^1.17.11",
+    "@react-native-material/core": "^1.3.7",
+    "@react-navigation/drawer": "^6.6.0",
+    "@react-navigation/native": "^6.1.4",
+    "@react-navigation/stack": "^6.3.13",
+    "@reduxjs/toolkit": "^1.9.2",
+    "@types/i18n-js": "^3.8.4",
+    "axios": "^1.3.3",
     "expo": "^47.0.0",
+    "expo-localization": "^14.0.0",
+    "i18n-js": "^4.2.2",
+    "lodash.memoize": "^4.1.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
-    "react-native-web": "~0.18.7"
+    "react-native-localize": "^2.2.4",
+    "react-native-paper": "^5.2.0",
+    "react-native-vector-icons": "^9.2.0",
+    "react-native-web": "~0.18.7",
+    "react-redux": "^8.0.5",
+    "react-router-native": "5.3.4",
+    "redux-thunk": "^2.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
+    "@types/react-router-native": "^5.1.3",
     "typescript": "^4.6.3"
   },
   "scripts": {
