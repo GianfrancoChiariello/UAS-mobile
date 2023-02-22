@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {useStates} from './useStates'
+import {StatusBar} from 'react-native'
 
 
 export const useStyles = () => {
@@ -92,7 +93,7 @@ export const useStyles = () => {
                         position: 'absolute',
                         top: 40,
                         left: 0,
-                        width: 330.90,
+                        width: '100%',
                         zIndex: 1,
                         borderRadius: 5,
                     },
@@ -163,6 +164,185 @@ export const useStyles = () => {
                     flexDirection: 'row',
                     alignItems: 'stretch',
                 }
+            },
+            MainScreen2: {
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+                height: '88%',
+
+                headerMain: {
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    marginTop: StatusBar.currentHeight + 20,
+                    padding: 10,
+                    paddingHorizontal: 20,
+                    width: '100%',
+
+                    text: {
+                        fontSize: 25    ,
+                        fontWeight: 'bold',
+                    },
+                    badge: {
+                        position: 'absolute',
+                        top: 0,
+                        right: -3,
+                        backgroundColor: '#52A8B5',
+                        borderWidth: 1,
+                        color: '#fff',
+                        opacity: 0.9,
+                    }
+                },
+                MainBoxShortcuts: {
+                    width: '100%',
+                    height: '80%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: 20,
+
+                    subBox: {
+                        width: '90%',
+                    },
+                    textShowtcuts: {
+                        fontSize: 16,
+                        fontWeight: '500',
+                        opacity: 0.6,
+                    },
+
+                    containerShorts : {
+                        backgroundColor: '#FFFFFF',
+                        opacity: 0.8,
+                        width: '92%',
+                        height: '90%',
+                        display: 'flex',
+                        borderRadius: 20,
+                        flexWrap: 'wrap',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center',
+                        paddingTop: 20,
+                    },
+                    subContainerShorts: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        flexWrap: 'wrap',
+                    },
+                    MapBox: {
+                        backgroundColor: '#52A8B5',
+                        width: 147,
+                        height: 147,
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        alignItems: 'flex-start',
+                        margin: 10,
+                        borderRadius: 20,
+                        paddingLeft: 10,
+                        paddingTop: 15,
+
+                        titleLarge: {
+                            fontWeight: '500',
+                            opacity: 0.9,
+                        },
+                        description: {
+                            fontSize: 12,
+                            opacity: 0.6,
+                            width: '80%',
+                        }
+                    },
+                },
+                RecentActions: {
+                    display: 'flex',
+                    flexDirection: 'column',
+                    marginTop: 20,
+
+                    text: {
+                        fontSize: 16,
+                        fontWeight: '500',
+                        opacity: 0.6,
+                    },
+
+                    slider: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        
+                        ItemsSliders: {
+                            backgroundColor: '#95C0C8',
+                            width: 52,
+                            height: 52,
+                            margin: 5,
+                            borderRadius: 50,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }
+                    },
+
+                },
+                SpanContainer: {
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+
+                    span: {
+                        backgroundColor: '#35BC94',
+                        width: '35%',
+                        height: 3,
+                        margin: 17,
+                        borderRadius: 20,
+                    }
+                },
+                Navbar: {
+                    display: 'flex',
+                    width: '100%',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    marginBottom: 50,
+
+                    container: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center',
+                        backgroundColor: '#FFFFFF',
+                        borderRadius: 20,
+                        width: '92%',
+
+                        item: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            paddingVertical: 5,
+
+                            iconContainer: {
+                                backgroundColor: '#95C0C8',
+                                width: 50,
+                                height: 50,
+                                marginHorizontal: 5,
+                                borderRadius: 50,
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+
+                                icon: {
+                                    opacity: 0.5,
+                                },
+                                text: {
+                                    fontSize: 10,
+                                }
+                            }
+                        }
+                    }
+                }
+
             },
             ImageBackground: {
                 flex: 1,
@@ -424,6 +604,185 @@ export const useStyles = () => {
                     flexDirection: 'row',
                     alignItems: 'stretch',
                 }
+            },
+            MainScreen2: {
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+                height: '88%',
+
+                headerMain: {
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    marginTop: StatusBar.currentHeight + 20,
+                    padding: 10,
+                    paddingHorizontal: 20,
+                    width: '100%',
+
+                    text: {
+                        fontSize: 25    ,
+                        fontWeight: 'bold',
+                    },
+                    badge: {
+                        position: 'absolute',
+                        top: 0,
+                        right: -3,
+                        backgroundColor: '#52A8B5',
+                        borderWidth: 1,
+                        color: '#fff',
+                        opacity: 0.9,
+                    }
+                },
+                MainBoxShortcuts: {
+                    width: '100%',
+                    height: '80%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: 20,
+
+                    subBox: {
+                        width: '90%',
+                    },
+                    textShowtcuts: {
+                        fontSize: 16,
+                        fontWeight: '500',
+                        opacity: 0.6,
+                    },
+
+                    containerShorts : {
+                        backgroundColor: '#FFFFFF',
+                        opacity: 0.8,
+                        width: '92%',
+                        height: '90%',
+                        display: 'flex',
+                        borderRadius: 20,
+                        flexWrap: 'wrap',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center',
+                        paddingTop: 20,
+                    },
+                    subContainerShorts: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        flexWrap: 'wrap',
+                    },
+                    MapBox: {
+                        backgroundColor: '#52A8B5',
+                        width: 147,
+                        height: 147,
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        alignItems: 'flex-start',
+                        margin: 10,
+                        borderRadius: 20,
+                        paddingLeft: 10,
+                        paddingTop: 15,
+
+                        titleLarge: {
+                            fontWeight: '500',
+                            opacity: 0.9,
+                        },
+                        description: {
+                            fontSize: 12,
+                            opacity: 0.6,
+                            width: '80%',
+                        }
+                    },
+                },
+                RecentActions: {
+                    display: 'flex',
+                    flexDirection: 'column',
+                    marginTop: 20,
+
+                    text: {
+                        fontSize: 16,
+                        fontWeight: '500',
+                        opacity: 0.6,
+                    },
+
+                    slider: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        
+                        ItemsSliders: {
+                            backgroundColor: '#95C0C8',
+                            width: 52,
+                            height: 52,
+                            margin: 5,
+                            borderRadius: 50,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }
+                    },
+
+                },
+                SpanContainer: {
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+
+                    span: {
+                        backgroundColor: '#35BC94',
+                        width: '35%',
+                        height: 3,
+                        margin: 17,
+                        borderRadius: 20,
+                    }
+                },
+                Navbar: {
+                    display: 'flex',
+                    width: '100%',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    marginBottom: 50,
+
+                    container: {
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center',
+                        backgroundColor: '#FFFFFF',
+                        borderRadius: 20,
+                        width: '92%',
+
+                        item: {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            paddingVertical: 5,
+
+                            iconContainer: {
+                                backgroundColor: '#95C0C8',
+                                width: 50,
+                                height: 50,
+                                marginHorizontal: 5,
+                                borderRadius: 50,
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+
+                                icon: {
+                                    opacity: 0.5,
+                                },
+                                text: {
+                                    fontSize: 10,
+                                }
+                            }
+                        }
+                    }
+                }
+
             },
             ImageBackground: {
                 flex: 1,

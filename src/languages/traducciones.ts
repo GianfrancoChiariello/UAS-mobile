@@ -36,6 +36,7 @@ const traducciones = {
             configDescripion: 'Tu configuración'
         },
         noMatches: 'No hay coincidencias',
+        hi: 'Hola ',
     },
     en: {
         selectLang: "Select a language",
@@ -74,6 +75,7 @@ const traducciones = {
             configDescripion: 'Your configuration'
         },
         noMatches: 'No matches',
+        hi: 'Hi ',
     },
     br: {
         selectLang: "Selecione um idioma",
@@ -112,6 +114,7 @@ const traducciones = {
             configDescripion: 'Sua configuração'
         },
         noMatches: 'Nenhuma correspondência',
+        hi: 'Olá ',
     }
 }
 

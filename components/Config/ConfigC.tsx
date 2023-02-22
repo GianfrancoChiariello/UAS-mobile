@@ -1,11 +1,9 @@
-import { View, Text, TouchableOpacity,Linking } from 'react-native'
+import { ScrollView,View, Text, TouchableOpacity,Linking } from 'react-native'
 import React from 'react'
 import BackBar from '../Recycles/BackBar'
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome5'
 
 export default function ConfigC() {
-  
-
   
     const PrimaryConfigItems = [
         {
@@ -43,11 +41,8 @@ export default function ConfigC() {
         }
     ]
   
-  
-  
     return (
     <View>
-      
       <BackBar text='Configuration' background='white' height={60} color={'black'} />
       <View style={{
         width: '100%',
@@ -106,9 +101,11 @@ export default function ConfigC() {
                 opacity: 0.6,
             }}></View>
 
+
             {
             SecondaryConfigItems.map((item, index) => {
                 return (
+
                     <TouchableOpacity key={index}>
                         <View key={index} style={{
                             width: '95%',
@@ -140,7 +137,6 @@ export default function ConfigC() {
                 )
             })
             }
-
             <View style={{
                 alignItems: 'center',
             }}>
