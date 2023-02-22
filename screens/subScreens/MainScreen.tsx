@@ -1,6 +1,6 @@
 import {ImageBackground} from 'react-native'
 import React from 'react'
-import SideBar from '../../components/SideBar'
+import SideBar from '../../components/Recycles/SideBar'
 import MainC from '../../components/Main/MainC'
 
 

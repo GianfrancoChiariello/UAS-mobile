@@ -3,9 +3,8 @@ import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import React from 'react'
 import {
     useHistory,
-    useLocation
 } from 'react-router-native'
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../../hooks/useLanguage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -153,12 +152,12 @@ export default function SideBar({children}) {
       drawerPosition={'left'}
       renderNavigationView={() => (
         <ImageBackground 
-            source={require('../assets/images/background.png')}
+            source={require('../../assets/images/background.png')}
             style={style.backgroundImage}>
             <View>
                 
                 <View style={style.logoNavbar}>
-                    <Image source={require('../assets/images/logo.png')} style={style.image} />
+                    <Image source={require('../../assets/images/logo.png')} style={style.image} />
                 </View>
 
                 <View style={style.containerItems}>

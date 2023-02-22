@@ -2,9 +2,11 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { useHistory } from 'react-router-native'
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome5'
+import {useStyles} from '../../hooks/useStyles'
 
-export default function BackBar({text, background, height}) {
+export default function BackBar({text, background, height,color}) {
     const history = useHistory()
+    const style = useStyles()
 
   return (
     <View style={{
@@ -16,14 +18,15 @@ export default function BackBar({text, background, height}) {
         backgroundColor: background,
         height: height,
     }}>
-        <AwesomeIcon name="arrow-left" size={20} onPress={() => {
+        <AwesomeIcon name="arrow-left" style={{color: {color}, paddingRight: 5,paddingVertical: 10}} size={20} onPress={() => {
             history.goBack()
         }} />
-        <Text style={{
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginLeft: 120,
-        }}>{text}</Text>
+        <View style={style.backBar.backBarText as never}>
+            <Text style={{
+                fontSize: 20,
+                fontWeight: 'bold',
+            }}>{text}</Text>
+        </View>
     </View>
   )
 }

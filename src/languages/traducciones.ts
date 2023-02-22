@@ -6,7 +6,7 @@ const traducciones = {
         forgotPass: "¿Olvidaste tu contraseña?",
         register: "Regístrate",
         altLogin: "O inicia sesión con",
-        fielEmail: "Nombre de usuario, correo electrónico o teléfono",
+        fielEmail: "Nombre de usuario",
         fielCorp : "ID Corporativo",
         accesos: "Mis accesos personales",
         accesosSpecial: "Mis accesos especiales",
@@ -34,7 +34,8 @@ const traducciones = {
             teamDescripion: 'Tus accesos de equipo',
             requesttDescripion: 'Tus solicitudes',
             configDescripion: 'Tu configuración'
-        }
+        },
+        noMatches: 'No hay coincidencias',
     },
     en: {
         selectLang: "Select a language",
@@ -43,7 +44,7 @@ const traducciones = {
         forgotPass: "Forgot password?",
         register: "Register",
         altLogin: "Or Sign in with",
-        fielEmail: "Username, Email & Phone Number",
+        fielEmail: "Username",
         fielCorp : "Corporate ID",
         accesos: "My personal accesses",
         accesosSpecial: "My special accesses",
@@ -71,7 +72,8 @@ const traducciones = {
             teamDescripion: 'Your team accesses',
             requesttDescripion: 'Your requests',
             configDescripion: 'Your configuration'
-        }
+        },
+        noMatches: 'No matches',
     },
     br: {
         selectLang: "Selecione um idioma",
@@ -80,7 +82,7 @@ const traducciones = {
         forgotPass: "Esqueceu a senha?",
         register: "Registre-se",
         altLogin: "Ou entre com",
-        fielEmail: "Nome de usuário, e-mail e número de telefone",
+        fielEmail: "Nome de usuário",
         fielCorp : "ID Corporativo",
         accesos: "Meus acessos pessoais",
         accesosSpecial: "Meus acessos especiais",
@@ -108,7 +110,8 @@ const traducciones = {
             teamDescripion: 'Seus acessos de time',
             requesttDescripion: 'Suas solicitações',
             configDescripion: 'Sua configuração'
-        }
+        },
+        noMatches: 'Nenhuma correspondência',
     }
 }
 

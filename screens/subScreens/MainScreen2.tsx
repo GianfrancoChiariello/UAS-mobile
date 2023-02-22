@@ -2,13 +2,8 @@ import {ImageBackground,View,Text,StatusBar,TouchableOpacity} from 'react-native
 import React from 'react'
 import { FontAwesome5 } from '@expo/vector-icons';
 import { useHistory } from 'react-router-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useLanguage } from '../../hooks/useLanguage';
 import { Badge } from 'react-native-paper';
-
-
-
-
 
 
 export default function MainScreen() {
@@ -59,7 +54,7 @@ export default function MainScreen() {
       source={require('../../assets/images/background.png')}
       style={{    
         flex: 1,
-        width: '101%',
+        width: '100%',
         height: '100%',
       }}>
 
@@ -86,10 +81,10 @@ export default function MainScreen() {
                     fontWeight: 'bold',
                 }}>Hi Gian,</Text>
                 <View>
-                <FontAwesome5 onPress={() => history.push('profile')} name="user-circle" size={24} color="black" />
+                <FontAwesome5 onPress={() => history.push('profile')} name="user-circle" size={24} color="black" style={{paddingLeft:10, paddingVertical: 5}} />
                 <Badge size={14} style={{
                     position: 'absolute',
-                    top: -4,
+                    top: 0,
                     right: -3,
                     backgroundColor: '#52A8B5',
                     borderWidth: 1,
@@ -123,13 +118,13 @@ export default function MainScreen() {
                 <View style={{
                     backgroundColor: '#FFFFFF',
                     opacity: 0.8,
-                    width: '90%',
+                    width: '92%',
                     height: '90%',
                     display: 'flex',
                     borderRadius: 20,
-                    flexDirection: 'row',
                     flexWrap: 'wrap',
-                    justifyContent: 'center',
+                    justifyContent: 'space-evenly',
+                    alignItems: 'center',
                     paddingTop: 20,
                 }}>
                     <View style={{
@@ -142,33 +137,35 @@ export default function MainScreen() {
                     {
                         shorts.filter((item: any) => item.type !== 'config').map((item: any, key: any) => {
                             return (
-                                <View key={key + item} style={{
-                                    backgroundColor: '#52A8B5',
-                                    width: 140,
-                                    height: 140,
-                                    display: 'flex',
-                                    justifyContent: 'flex-start',
-                                    alignItems: 'flex-start',
-                                    margin: 10,
-                                    borderRadius: 20,
-                                    paddingLeft: 10,
-                                    paddingTop: 15,
-                                }}>
-                                    <FontAwesome5 name={item.icon} size={24} color="black"/>
-                                    <Text style={{
-                                        fontWeight: '500',
-                                        opacity: 0.9,
+                                <TouchableOpacity key={key + item}>
+                                    <View style={{
+                                        backgroundColor: '#52A8B5',
+                                        width: 147,
+                                        height: 147,
+                                        display: 'flex',
+                                        justifyContent: 'flex-start',
+                                        alignItems: 'flex-start',
+                                        margin: 10,
+                                        borderRadius: 20,
+                                        paddingLeft: 10,
+                                        paddingTop: 15,
                                     }}>
-                                        {item.titleLarge}
-                                    </Text>
-                                    <Text style={{
-                                        fontSize: 12,
-                                        opacity: 0.6,
-                                        width: '80%',
-                                    }}>
-                                        {item.description}
-                                    </Text>
-                                </View>
+                                        <FontAwesome5 name={item.icon} size={24} color="black"/>
+                                        <Text style={{
+                                            fontWeight: '500',
+                                            opacity: 0.9,
+                                        }}>
+                                            {item.titleLarge}
+                                        </Text>
+                                        <Text style={{
+                                            fontSize: 12,
+                                            opacity: 0.6,
+                                            width: '80%',
+                                        }}>
+                                            {item.description}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
                             )
                         })
                     }
@@ -177,7 +174,7 @@ export default function MainScreen() {
                     <View style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        marginTop: 40,
+                        marginTop: 20,
                     }}>
                         <View>
                             <Text style={{
@@ -258,7 +255,7 @@ export default function MainScreen() {
                 alignItems: 'center',
                 backgroundColor: '#FFFFFF',
                 borderRadius: 20,
-                width: '90%',
+                width: '92%',
             }}>
                 {
                     shorts.map((item: any, key: any) => {
@@ -300,7 +297,6 @@ export default function MainScreen() {
                 }
             </View>
         </View>
-
     </ImageBackground>
   )
 }

@@ -1,10 +1,8 @@
 import { useSelector } from "react-redux";
 
-export const useRoles = () => {
-    const ejemplo1 = useSelector((state: any) => state?.ejemplo1);
-    const ejemplo2 = useSelector((state: any) => state?.ejemplo2);
-    const ejemplo3 = useSelector((state: any) => state?.ejemplo3);
-    const ejemplo4 = useSelector((state: any) => state?.ejemplo4);
+export const useStates = () => {
+    const corps = useSelector((state: any) => state?.corps)
+    const theme = useSelector((state: any) => state?.theme)
 
-    return {ejemplo1 , ejemplo2 , ejemplo3 , ejemplo4} 
+    return {corps , theme} 
 }

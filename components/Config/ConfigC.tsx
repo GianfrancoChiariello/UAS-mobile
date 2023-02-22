@@ -1,27 +1,34 @@
 import { View, Text, TouchableOpacity,Linking } from 'react-native'
 import React from 'react'
-import BackBar from '../../components/BackBar'
+import BackBar from '../Recycles/BackBar'
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome5'
 
 export default function ConfigC() {
   
+
   
     const PrimaryConfigItems = [
         {
             title: 'My corporation',
             icon: 'city',
+            action: null
         },
         {
             title: 'My reports',
             icon: 'bullhorn',
+            action: null
         },
         {
             title: 'Change language',
             icon: 'language',
+            action: null
         },
         {
             title: 'Valorate app',
             icon: 'star',
+            action: () => {
+                Linking.openURL('https://play.google.com/store/apps/details?id=com.pentass.uas')
+            }
         }
     ]
 
@@ -40,7 +47,8 @@ export default function ConfigC() {
   
     return (
     <View>
-      <BackBar text='Configuration' background='white' height={60} />
+      
+      <BackBar text='Configuration' background='white' height={60} color={'black'} />
       <View style={{
         width: '100%',
         height: '100%',
@@ -58,9 +66,7 @@ export default function ConfigC() {
         {
             PrimaryConfigItems.map((item, index) => {
                 return (
-                    <TouchableOpacity key={index} onPress={() => {
-                        item.title == 'Valorate app' ? Linking.openURL('https://play.google.com/store/apps/details?id=com.pentass.uas') : null
-                    }}>
+                    <TouchableOpacity key={index} onPress={() => {item.action !== null ? item.action() : null}}>
                         <View style={{
                             width: '95%',
                             height: 60,
@@ -135,18 +141,17 @@ export default function ConfigC() {
             })
             }
 
-            <Text style={{
-                marginTop: 80,
+            <View style={{
+                alignItems: 'center',
             }}>
-                UAS Version 1.0.1
-            </Text>
-
-            <Text style={{
-                marginTop: 3,
-            }}
-            >
-                Powered by Penta Security U.A.S
-            </Text>
+                <Text>
+                    UAS Version 1.0.1
+                </Text>
+                <Text>
+                    Powered by Penta Security U.A.S
+                </Text>
+            </View>
+      
       </View>
 
       </View>

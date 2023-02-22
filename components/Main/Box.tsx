@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, TouchableNativeFeedback } from 'react-nat
 import React from 'react'
 import {useLanguage} from '../../hooks/useLanguage'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {useStyles} from '../../hooks/styles/useStyles'
+import {useStyles} from '../../hooks/useStyles'
 
 export default function Box() {
   

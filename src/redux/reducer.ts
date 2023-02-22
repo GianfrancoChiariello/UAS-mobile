@@ -1,18 +1,33 @@
 import {
-    LOGIN
+    LOGIN,
+    CHANGE_LANGUAGE,
+    THEME,
+    CORPS,
 } from "./const";
 
 
-
-// declaro el tipoado de los estados iniciales
-export interface reducerStates {
-ejemplo: Object;
-}
-
 // estados iniciales
 const initialState = {
-    ejemplo: [],
+    theme: "light",
     lang: "en",
+    corps: [
+      {
+          id: 1,
+          name: "Penta",
+      },
+      {
+          id: 2,
+          name: "Penta Security Solutions",
+      },
+      {
+          id: 3,
+          name: "Penta UASS",
+      },
+      {
+          id: 4,
+          name: "Penta demo",
+      }
+    ],
 };
 
 
@@ -20,19 +35,29 @@ const initialState = {
 export const userReducer = (state = initialState, action: any) => {
 
 switch (action.type) {
-  // Login //
   case LOGIN:
     return {
       ...state,
       userLogin: action.payload,
-    };
-  case "CHANGE_LANGUAGE":
+  };
+  case CHANGE_LANGUAGE:
     return {
       ...state,
       lang: action.payload,
-    };
+  };
+  case CORPS:
+    return {
+      ...state,
+      corps: action.payload,
+  }
+  case THEME: 
+    return {
+      ...state,
+      theme: action.payload,
+  }
+  
     default:
-        return state;
-    }
+      return state;
+  }
 };
 

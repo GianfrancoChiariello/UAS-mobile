@@ -3,12 +3,10 @@ import { TextInput } from 'react-native-paper';
 import React from 'react'
 import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import { Button } from 'react-native-paper';
-import { useHistory } from 'react-router-native';
+import BackBar from '../Recycles/BackBar';
 
 
 export default function ProfileC() {
-
-    const history = useHistory();
 
   return (
     <View style={{
@@ -17,12 +15,7 @@ export default function ProfileC() {
         backgroundColor: 'rgba(255, 255, 255, 0.54)',
         paddingTop: StatusBar.currentHeight,
     }}>
-      <View style={{
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-      }}>
-        <AwesomeIcon name="arrow-left" size={20} color="black" onPress={() => history.push('main2')} />
-      </View>
+      <BackBar text={'Profile'} background={'transparent'} height={60} color={'gray'} />
 
       <View style={{
         display: 'flex',

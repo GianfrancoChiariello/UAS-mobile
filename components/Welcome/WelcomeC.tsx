@@ -1,6 +1,6 @@
 import { View, Text,Image, ImageBackground, TouchableNativeFeedback } from 'react-native'
 import React from 'react'
-import {useStyles} from '../../hooks/styles/useStyles'
+import {useStyles} from '../../hooks/useStyles'
 import {useLanguage} from '../../hooks/useLanguage'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import {
